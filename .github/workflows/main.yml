@@ -23,10 +23,10 @@ jobs:
           dotnet-version: '6.0.x'
 
       - name: Restore
-        run: dotnet restore ./GitHubActionDemo.sln
+        run: dotnet restore ./GitHubActionDemoApp.sln
 
       - name: Build
-        run: dotnet build ./GitHubActionDemo.sln --configuration Release --no-release
+        run: dotnet build ./GitHubActionDemoApp.sln --configuration Release --no-release
 
       - name: Publish
-        run: dotnet publish ./GitHubActionDemo.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+        run: dotnet publish ./GitHubActionDemoApp.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
